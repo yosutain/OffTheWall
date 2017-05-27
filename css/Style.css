@@ -1,0 +1,223 @@
+@import url(https://fonts.googleapis.com/css?family=Lato);
+
+body {
+	background:skyBlue;
+	font-family: 'Lato', sans-serif;
+	color:#333333;
+}
+
+h1 {
+	font-weight:900;
+}
+
+header {
+	height: 100vh;
+	min-height: 300pt;
+	background: linear-gradient(rgba(135,206,250,0.2), rgba(135,206,250,0.2)),
+		url("https://dl.dropboxusercontent.com/s/nhv9px45tfr1j9o/bluewall.jpg") 
+		no-repeat fixed;
+	background-size: cover;
+	font-weight:700;
+	color:#333333;
+	border-bottom: 2pt solid #bee5f4;
+}
+
+.margin15 {
+	margin-left: 15pt;
+	margin-right: 15pt;
+}
+
+.padding15 {
+	padding-left: 15pt;
+	padding-right: 15pt;
+}
+
+.makeCenter {
+	position: relative;
+	top: 20%;
+	left: 0;
+	right: 0;
+	bottom: 0;
+}
+
+.centerButtons {
+	position: relative;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+}
+
+.fluidFont {
+	font-size: 1.5vw;
+}
+
+.skyBlue {
+	background-color:skyBlue;
+	box-shadow: 0 2pt 3pt rgba(0,0,0,.5);
+}
+
+.glyphNav {
+	font-size: 45pt;
+	font-weight: 100;
+	color:skyBlue;
+	text-shadow: 0 2pt 3pt rgba(0,0,0,.5);
+}
+
+.goDown {
+	position: absolute;
+	top: 90vh;
+	left: calc(50% - 22.5pt);
+	right: 0;
+	bottom: 0;
+}
+
+.downArrow {
+	font-size: 45pt;
+	color:skyBlue;
+	text-shadow: 0 2pt 3pt rgba(0,0,0,.5);
+}
+
+footer {
+	height: 100pt;
+	background:skyBlue;
+	font-weight:bolder;
+	color:#333333;
+}
+
+.footerShadow {
+	border-top: 2pt solid #bee5f4;
+	box-shadow: inset 0 3pt 2pt rgba(0,0,0,.4);
+}
+
+div.blue {
+	min-height: 100%;
+	background:lightBlue;
+}
+
+.navbar-default {
+	font-weight: 700;
+	background-color: skyBlue;
+	border-bottom: 3pt solid #bee5f4;
+	box-shadow: 0 2pt 3pt rgba(0,0,0,.5);
+}
+
+.navbar-default .navbar-link,
+.navbar-default .navbar-brand,
+.navbar-default .navbar-text,
+.navbar-default .navbar-nav > li > a {
+	color: white;
+}
+
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus,
+.navbar-default .navbar-link:hover,
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus {
+	color: navy
+}
+
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
+	color: navy;
+	background-color: deepSkyBlue;
+}
+
+.navbar-default .navbar-nav > .open > a,
+.navbar-default .navbar-nav > .open > a:hover,
+.navbar-default .navbar-nav > .open > a:focus {
+	color: navy;
+	background-color: deepSkyBlue;
+}
+
+.navbar-default .navbar-toggle {
+	border: 0pt solid white;
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+	background-color: white;
+}
+
+.navbar-default .navbar-collapse,
+.navbar-default .navbar-form {
+	border-color: white;
+}
+
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus {
+	background-color: skyBlue;
+}
+
+.navbar-default .navbar-toggle:hover .icon-bar,
+.navbar-default .navbar-toggle:focus  .icon-bar{
+	background-color: navy;
+}
+
+.slide {
+	position: relative;
+}
+
+.slide__content {
+	max-width: 100%;
+	margin: auto;
+}
+.slide__text {
+	padding: 8%;
+}
+
+.slide__bg {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: -1;
+}
+
+#slide-1 .slide__bg {
+	background: url("https://dl.dropboxusercontent.com/s/k4zwdm7230oqwte/stonewall.jpg");
+	background-repeat: repeat;
+	background-size: contain;
+	border-bottom: 2pt solid #bee5f4;
+	border-top: 2pt solid navy;
+	box-shadow: inset 0 2pt 3pt rgba(0,0,0,.5);
+}  
+
+#slide-2 .slide__bg {
+	background: url("https://dl.dropboxusercontent.com/s/imvu3ybexj42azu/strawberries.jpg");
+	background-repeat: repeat;
+	background-size: contain;
+	border-bottom: 2pt solid #bee5f4;
+	border-top: 2pt solid navy;
+	box-shadow: inset 0 2pt 3pt rgba(0,0,0,.5);
+}  
+
+@supports ((perspective: 1px) and (not (-webkit-overflow-scrolling: touch))) {
+	html, body {
+		overflow: hidden;
+		height: 100%;
+	}
+
+	body {
+		transform: translateZ(0px);
+	}
+
+	.slides {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		overflow-x: hidden;
+		overflow-y: auto;
+		perspective: 150pt;
+	}
+
+	.slide, .slide__content {
+		transform-style: preserve-3d;
+	}
+
+	.slide__text {
+		transform: translateZ(60pt) scale(0.5);
+		transform-origin: 50% 50%;
+	}	
+}
